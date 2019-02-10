@@ -34,6 +34,11 @@ class LoanHandler(tornado.web.RequestHandler):
         else:
             self.write({'message': 'Undecided'})
 
+    def options(self):
+        # no body
+        self.set_status(204)
+        self.finish()
+
 def make_app():
     return tornado.web.Application([
         (r"/", MainHandler),
