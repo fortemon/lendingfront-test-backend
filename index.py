@@ -33,7 +33,6 @@ class LoanHandler(tornado.web.RequestHandler):
             self.write({'message': 'Declined'})
         else:
             self.write({'message': 'Undecided'})
-            
 
 
 def make_app():
